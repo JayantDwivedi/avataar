@@ -130,6 +130,7 @@ const PlaygroundArea = () => {
             {BackgroundColor?.map((c: string) => (
               <div
                 className={`w-12 h-12 bg-[#${c}] cursor-pointer`}
+                style={{backgroundColor:`#${c}`}}
                 onClick={() => updateOptions({ backgroundColor: [c] })}
               ></div>
             ))}
