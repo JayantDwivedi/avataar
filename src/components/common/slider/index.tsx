@@ -1,13 +1,13 @@
 import React from "react";
 
 interface ISlider {
-    value?:number;
-    min?:number;
-    max?:number;
-    handleChange:(value:any)=>void;
+  value?: number;
+  min?: number;
+  max?: number;
+  handleChange: (value: any) => void;
 }
 
-const Slider = ({value,handleChange,min=0,max=100}:ISlider) => {
+const Slider = ({ value, handleChange, min = 0, max = 100 }: ISlider) => {
   return (
     <div>
       <label
@@ -22,7 +22,7 @@ const Slider = ({value,handleChange,min=0,max=100}:ISlider) => {
         min={min}
         max={max}
         value={value}
-        onChange={(event)=>handleChange(event.target.value)}
+        onChange={(event) => handleChange(event.target.value)}
         className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
       />
     </div>

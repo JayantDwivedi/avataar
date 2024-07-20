@@ -18,10 +18,10 @@ const PlaygroundArea = () => {
   const [radius, setRadius] = useState<number>(0);
 
   const hairs = Array.from({ length: 10 }, (_, i) =>
-    String(i + 1).padStart(2, "0")
+    String(i + 1).padStart(2, "0"),
   );
   const Eyebrows = Array.from({ length: 10 }, (_, i) =>
-    String(i + 1).padStart(2, "0")
+    String(i + 1).padStart(2, "0"),
   );
 
   const avatarCreation = () => {
@@ -126,16 +126,15 @@ const PlaygroundArea = () => {
           <div className="mb-4">
             <p className="font-semibold mb-4">Background Color</p>
             <div className="flex gap-2">
-
-            {BackgroundColor?.map((c: string) => (
-              <div
-                className={`w-12 h-12 bg-[#${c}] cursor-pointer`}
-                style={{backgroundColor:`#${c}`}}
-                onClick={() => updateOptions({ backgroundColor: [c] })}
-              ></div>
-            ))}
+              {BackgroundColor?.map((c: string) => (
+                <div
+                  key={c}
+                  className={`w-12 h-12 bg-[#${c}] cursor-pointer`}
+                  style={{ backgroundColor: `#${c}` }}
+                  onClick={() => updateOptions({ backgroundColor: [c] })}
+                ></div>
+              ))}
             </div>
-
           </div>
           <div>
             <p className="font-semibold mb-4">Long Hairs</p>
@@ -205,7 +204,6 @@ const PlaygroundArea = () => {
               })}
             </div>
           </div>
-
         </div>
         {/* <button
           className="bg-blue-700 text-white p-4 rounded-2xl"

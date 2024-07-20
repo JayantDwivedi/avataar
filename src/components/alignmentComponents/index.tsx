@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AlignmentComponent = () => {
-  return (
-    <div>AlignmentComponent</div>
-  )
-}
+  return <div>AlignmentComponent</div>;
+};
 
-export default AlignmentComponent
+export default AlignmentComponent;

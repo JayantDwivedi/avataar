@@ -5,10 +5,7 @@ interface IToggleButton {
   handleChange?: any;
 }
 
-const ToggleButton = ({
-  disabled = false,
-  handleChange,
-}: IToggleButton) => {
+const ToggleButton = ({ disabled = false, handleChange }: IToggleButton) => {
   return (
     <label className="inline-flex items-center cursor-pointer">
       <input
